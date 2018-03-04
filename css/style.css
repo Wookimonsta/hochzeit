@@ -1,3 +1,21 @@
+.hide_desktop
+{
+	display:none;
+}
+
+
+@media (max-width:480px) {
+	.hide_desktop {
+		display: block !important;
+	}
+}
+
+@media (max-width: 480px) {
+	.hide-mobile {
+		display: none;
+	}
+}
+
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon/icomoon.eot?srf3rx");
@@ -748,6 +766,10 @@ h1, h2, h3, h4, h5, h6, figure {
   #map {
     height: 200px;
   }
+}
+
+.left-stuff {
+	text-align: left;
 }
 
 .fh5co-social-icons {
