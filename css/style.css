@@ -1,3 +1,13 @@
+.desktop
+{
+	display: block;
+}
+
+.mobile
+{
+	display: block;
+}
+
 .hide_desktop
 {
 	display:none;

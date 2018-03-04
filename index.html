@@ -189,7 +189,7 @@
 										<span>Kornwestheim</span>
 									</div>
 									<!--<div class="hide_desktop">-->
-									<div id="dasKmobil">
+									<div id="dasKmobil" class="mobile">
 										<p>
 											<a href="https://www.google.de/maps/place/Das+K+-+Kultur-+und+Kongresszentrum/@48.8619821,9.1782865,15.25z/data=!4m5!3m4!1s0x4799d03f099b8659:0x60e34416d19342d!8m2!3d48.85991!4d9.18601?hl=de" target="_blank">
 												Stuttgarter Str. 65, 70806 Kornwestheim
@@ -204,31 +204,55 @@
 										</p>
 									</div>
 									<!--<div class="hide_mobile">-->
-									<div id="dasKpc">
+									<div id="dasKpc" class="desktop">
 										<p>
 											<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2207.2631221883858!2d9.181741911059213!3d48.860250551016556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4799d03f099b8659%3A0x60e34416d19342d!2sThe+K+-+Culture+and+Congress+Centre!5e0!3m2!1sen!2sde!4v1519592312940" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
 										</p>
 									</div>
+									<script>
+										window.onload = function() {
+											sleep(100000);
+											if (	navigator.userAgent.indexOf( "Mobile" ) !== -1 || 
+												  navigator.userAgent.indexOf( "iPhone" ) !== -1 || 
+												  navigator.userAgent.indexOf( "Android" ) !== -1 || 
+												  navigator.userAgent.indexOf( "Windows Phone" ) !== -1 )
+											{
+												var elements = document.querySelectorAll('.desktop');
+												for(var i=0; i<elements.length; i++){
+													elements[i].style.display = "none";
+												}
+												var elements = document.querySelectorAll('.mobile');
+												for(var i=0; i<elements.length; i++){
+													elements[i].style.display = "block";
+												}
+											}
+											else {
+												var elements = document.querySelectorAll('.desktop');
+												for(var i=0; i<elements.length; i++){
+													elements[i].style.display = "block";
+												}
+												var elements = document.querySelectorAll('.mobile');
+												for(var i=0; i<elements.length; i++){
+													elements[i].style.display = "none";
+												}
+											}
+										}
+										
+										function sleep(milliseconds) {
+										  var start = new Date().getTime();
+										  for (var i = 0; i < 1e7; i++) {
+											if ((new Date().getTime() - start) > milliseconds){
+											  break;
+											}
+										  }
+										}
+									</script>
 									<!--
 									<p>
 										<a href="https://www.google.de/maps/place/Das+K+-+Kultur-+und+Kongresszentrum/@48.8619821,9.1782865,15.25z/data=!4m5!3m4!1s0x4799d03f099b8659:0x60e34416d19342d!8m2!3d48.85991!4d9.18601?hl=de" target="_blank">
 											<img src="images/dasK.png">
 										</a>
 									</p>-->
-									<script>
-										if (	navigator.userAgent.indexOf( "Mobile" ) !== -1 || 
-											  navigator.userAgent.indexOf( "iPhone" ) !== -1 || 
-											  navigator.userAgent.indexOf( "Android" ) !== -1 || 
-											  navigator.userAgent.indexOf( "Windows Phone" ) !== -1 )
-										{
-											document.getElementById("dasKpc").display = none;
-											document.getElementById("dasKmobile").display = block;
-										}
-										else {
-											document.getElementById("dasKpc").display = block;
-											document.getElementById("dasKmobile").display = none;
-										}
-									</script>
 								</div>
 							</div>
 							<div class="col-md-6 col-sm-6 text-center">
@@ -639,6 +663,8 @@
 
 	<script>
     //var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
+
+	
 	var d = new Date('2018-06-02');
 	
     // default example
