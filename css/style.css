@@ -804,10 +804,12 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .fh5co-contact-info ul li.address:before {
   font-size: 30px;
+  color: #f7a281;
   content: "\e9d1";
 }
 .fh5co-contact-info ul li.phone:before {
   font-size: 23px;
+  color: #f7a281;
   content: "\e9f4";
 }
 .fh5co-contact-info ul li.email:before {
