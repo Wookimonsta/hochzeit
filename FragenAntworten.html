@@ -244,7 +244,7 @@
 							<div class="col-md-6 col-sm-6 text-center">
 								<div class="event-wrap animate-box">
 									<h3>Hotel Central Classic***</h3>
-									<div class="hide_desktop">
+									<div class="mobile">
 										<p>
 											<a href="https://www.google.de/maps/place/Hotel+Central+Classic***/@48.7728753,9.1599333,20.5z/data=!4m5!3m4!1s0x410be64e67006527:0xe6b8729d0161e081!8m2!3d48.772917!4d9.159948" target="_blank">
 												Hasenbergstraße 49A, 70176 Stuttgart
@@ -254,7 +254,7 @@
 											Nur 200 Meter vom Restaurant entfernt könnt ihr auch stockbesoffen runterrollen.
 										</p>
 									</div>
-									<div class="hide_mobile">
+									<div class="desktop">
 										<p>
 											<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2629.4699901995896!2d9.157759316094145!3d48.772916979279216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x410be64e67006527%3A0xe6b8729d0161e081!2sHotel+Central+Classic*2A*2A*2A!5e0!3m2!1sen!2sde!4v1519683078246" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
 										</p>
@@ -264,7 +264,7 @@
 							<div class="col-md-6 col-sm-6 text-center">
 								<div class="event-wrap animate-box">
 									<h3>Hotel am Feuersee</h3>
-									<div class="hide_desktop">
+									<div class="mobile">
 										<p>
 											<a href="https://www.google.de/maps/place/Hotel+Am+Feuersee/@48.7734115,9.1645434,18.5z/data=!4m5!3m4!1s0x4799db4693e228cf:0x987ef7e091ed2ec5!8m2!3d48.7738984!4d9.1643863" target="_blank">
 												Johannesstraße 2, 70176 Stuttgart
@@ -274,7 +274,7 @@
 											400 Meter vom Restaurant und mit toller Aussicht auf den Feuersee.
 										</p>
 									</div>
-									<div class="hide_mobile">
+									<div class="desktop">
 										<p>
 											<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2629.4185908772465!2d9.162197616094204!3d48.773898379279274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4799db4693e228cf%3A0x987ef7e091ed2ec5!2sHotel+Am+Feuersee!5e0!3m2!1sen!2sde!4v1519683116192" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
 										</p>
@@ -287,6 +287,44 @@
 			</div>
 		</div>
 	</div>
+	
+	<script>
+		window.onload = function() {
+			if (	navigator.userAgent.indexOf( "Mobile" ) !== -1 || 
+				  navigator.userAgent.indexOf( "iPhone" ) !== -1 || 
+				  navigator.userAgent.indexOf( "Android" ) !== -1 || 
+				  navigator.userAgent.indexOf( "Windows Phone" ) !== -1 )
+			{
+				var elements = document.querySelectorAll('.desktop');
+				for(var i=0; i<elements.length; i++){
+					elements[i].style.display = "none";
+				}
+				var elements = document.querySelectorAll('.mobile');
+				for(var i=0; i<elements.length; i++){
+					elements[i].style.display = "block";
+				}
+			}
+			else {
+				var elements = document.querySelectorAll('.desktop');
+				for(var i=0; i<elements.length; i++){
+					elements[i].style.display = "block";
+				}
+				var elements = document.querySelectorAll('.mobile');
+				for(var i=0; i<elements.length; i++){
+					elements[i].style.display = "none";
+				}
+			}
+		}
+		
+		function sleep(milliseconds) {
+		  var start = new Date().getTime();
+		  for (var i = 0; i < 1e7; i++) {
+			if ((new Date().getTime() - start) > milliseconds){
+			  break;
+			}
+		  }
+		}
+	</script>
 
 	<!--
 	<div id="fh5co-gallery" class="fh5co-section-gray">
