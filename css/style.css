@@ -1,11 +1,11 @@
 .desktop
 {
-	display: block;
+	display: none;
 }
 
 .mobile
 {
-	display: block;
+	display: none;
 }
 
 .hide_desktop
