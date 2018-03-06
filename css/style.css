@@ -490,6 +490,12 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 
+.bigLetters
+{
+	color: #f7a281;
+	font-size: 30px;
+}
+
 .timeline {
   list-style: none;
   padding: 20px 0 20px;
@@ -580,7 +586,7 @@ h1, h2, h3, h4, h5, h6, figure {
   top: 16px;
   left: 50%;
   margin-left: -80px;
-  background-color: #999999;
+  background-color: #fff;
   z-index: 100;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -1556,6 +1562,44 @@ form label {
   text-transform: uppercase;
 }
 
+.gototop2 {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.gototop2.active {
+  opacity: 1;
+  visibility: visible;
+}
+.gototop2 a {
+  width: 50px;
+  height: 50px;
+  display: table;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.gototop2 a i {
+  height: 50px;
+  display: table-cell;
+  vertical-align: middle;
+}
+.gototop2 a:hover, .gototop a:active, .gototop a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
 .gototop {
   position: fixed;
   bottom: 20px;
@@ -1583,6 +1627,7 @@ form label {
   -ms-border-radius: 4px;
   border-radius: 4px;
 }
+
 .gototop a i {
   height: 50px;
   display: table-cell;
