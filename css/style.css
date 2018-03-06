@@ -1562,7 +1562,7 @@ form label {
   text-transform: uppercase;
 }
 
-.gototop2 {
+.newgototop {
   position: fixed;
   bottom: 80px;
   right: 20px;
@@ -1573,11 +1573,11 @@ form label {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
-.gototop2.active {
+.newgototop.active {
   opacity: 1;
   visibility: visible;
 }
-.gototop2 a {
+.newgototop a {
   width: 50px;
   height: 50px;
   display: table;
@@ -1590,12 +1590,12 @@ form label {
   border-radius: 4px;
 }
 
-.gototop2 a i {
+.newgototop a i {
   height: 50px;
   display: table-cell;
   vertical-align: middle;
 }
-.gototop2 a:hover, .gototop a:active, .gototop a:focus {
+.newgototop a:hover, .gototop a:active, .gototop a:focus {
   text-decoration: none;
   outline: none;
 }
