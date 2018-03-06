@@ -431,7 +431,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-counter .event-wrap,
 #fh5co-event .event-wrap {
   border: 2px solid rgba(255, 255, 255, 0.5);
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.5);
   padding: 30px;
   width: 100%;
   float: left;
@@ -575,7 +575,7 @@ h1, h2, h3, h4, h5, h6, figure {
   top: 16px;
   left: 50%;
   margin-left: -80px;
-  background-color: #111111;
+  background-color: #999999;
   z-index: 100;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
