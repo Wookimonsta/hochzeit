@@ -8,7 +8,7 @@ Your email address is: <?php echo $_POST["email"]; ?>
 </html> 
 
 <?php
-	$my_file = 'file.txt';
+	$my_file = '/var/www/heiraten/file.txt';
 	$handle = fopen($my_file, 'a') or die('Cannot open file:  '.$my_file);
 	$data = $_POST["name"] . $_POST["email"];
 	fwrite($handle, $data);
