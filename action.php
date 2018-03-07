@@ -8,11 +8,9 @@ Your email address is: <?php echo $_POST["email"]; ?>
 </html> 
 
 <?php
-	 $path = 'emails.txt';
-	 if (isset($_POST['name']) && isset($_POST['email'])) {
-		$fh = fopen($path,"a+");
-		$string = $_POST['name'].' - '.$_POST['email'];
-		fwrite($fh,$string); // Write information to the file
-		fclose($fh); // Close the file
-	 }
+	$my_file = 'file.txt';
+	$handle = fopen($my_file, 'a') or die('Cannot open file:  '.$my_file);
+	$data = $_POST["name"] . $_POST["email"];
+	fwrite($handle, $data);
+	fclose($handle);
 ?>
