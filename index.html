@@ -575,7 +575,7 @@
 			</div>
 			<div class="row animate-box">
 				<div class="col-md-10 col-md-offset-1">
-					<form id="kontaktForm" target="csrf-frame" action="action.php" method="post" class="form-inline">
+					<form id="kontaktForm" onSubmit="formSubmit()" target="csrf-frame" action="action.php" method="post" class="form-inline">
 						<div class="col-md-4 col-sm-4">
 							<div class="form-group">
 								<label for="name" class="sr-only">Name</label>
@@ -589,7 +589,7 @@
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4">
-							<button type="submit" class="btn btn-default btn-block">Ihr dürft mich anschreiben.</button>
+							<button name="btn" id="btnEmailSubmit" type="submit" class="btn btn-default btn-block">Ihr dürft mich anschreiben.</button>
 						</div>
 					</form>
 					<iframe style="display:none" name="csrf-frame"></iframe>
@@ -597,6 +597,15 @@
 			</div>
 		</div>
 	</div>
+	
+	<script type="text/javascript">
+		function formSubmit()
+		{
+			document.forms["kontaktForm"]["name"].value = "";
+			document.forms["kontaktForm"]["email"].value = "";
+			document.getElementById("btnEmailSubmit").text="Vielen Dank";
+		}
+	</script>
 	
 	<div class="fh5co-section">
 		<div class="container">
