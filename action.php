@@ -17,7 +17,7 @@ Your email address is: <?php echo $_POST["email"]; ?>
 	}
 	
 	$handle = fopen($my_file, 'a') or die('Cannot open file:  '.$my_file);
-	$data = $_POST["name"] . $_POST["email"];
+	$data = "Name: " . $_POST["name"] . " Email: " . $_POST["email"];
 	fwrite($handle, $data);
 	fclose($handle);
 ?>

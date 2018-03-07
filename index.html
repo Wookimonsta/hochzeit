@@ -575,7 +575,7 @@
 			</div>
 			<div class="row animate-box">
 				<div class="col-md-10 col-md-offset-1">
-					<form id="kontaktForm" action="action.php" method="post" class="form-inline">
+					<form id="kontaktForm" target="csrf-frame" action="action.php" method="post" class="form-inline">
 						<div class="col-md-4 col-sm-4">
 							<div class="form-group">
 								<label for="name" class="sr-only">Name</label>
@@ -592,6 +592,7 @@
 							<button type="submit" class="btn btn-default btn-block">Ihr dürft mich anschreiben.</button>
 						</div>
 					</form>
+					<iframe style="display:none" name="csrf-frame"></iframe>
 				</div>
 			</div>
 		</div>
